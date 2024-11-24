@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --secondarycolor: #000;
+    --primarycolor: #ffffff;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+}
+
+/* HEADER */
+
+
+.logo {
+    color: var(--secondarycolor);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.nav {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: var(--primarycolor);
+    height: 8vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.nav-list li a {
+    color: var(--secondarycolor);
+    text-decoration: none;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+
+.nav-list li a:hover {
+    opacity: 0.7;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--secondarycolor);
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: var(--primarycolor);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* FIM HEADER */
+
+/* MAIN */
+
+
+#inicio {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(240, 240, 240) 35%, rgba(255,255,255,1) 100%);
+    margin: 0 auto;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    padding: 5em 0;
+}
+
+#inicio .textoinicio {
+    width: 50%;
+}
+
+#inicio .textoinicio p{
+    font-size: 1dvw;
+    text-align: justify;
+    color: var(--secondarycolor);
+    font-weight: 500;
+    line-height: 1.7em;
+    letter-spacing: 1px;                
+    margin: 0;                
+    padding: 10px;                  
+}
+
+#inicio .fundo {
+    background-image: url(../imgs/fundo_livros.jpg);
+    width: 25dvw;
+    height: 25dvw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.background {
+    background-color: var(--primarycolor);
+}
+
+#sobre {
+    margin: 0 auto;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    height: auto;
+    width: 81.5dvw;
+    display: flex;
+    flex-direction: column;
+    padding: 5em 0;
+}
+
+#sobre h2 {
+    text-align: center;
+    color: var(--secondarycolor);
+}
+
+#sobre .textosobre p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.7em;
+    font-weight: 500;
+    color: var(--secondarycolor);
+}
+
+#produtos h2 {
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(0, 0, 0);
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(240, 240, 240) 35%, rgba(255,255,255,1) 100%);
+}
+
+.produtos .produto {
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    gap: 5px;
+    text-align: center;
+}
+
+.produtos .produto p {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    color: var(--secondarycolor);
+}
+
+.produtos .produto .preco {
+    font-size: 1.7em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin: .5em 0;
+}
+
+.produtos .produto button[class="botao_comprar"] {
+    background-color: rgb(0, 192, 0);
+    color: var(--primarycolor);
+    border: none;
+    outline: none;
+    padding: .5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.produtos .produto button[class="botao_comprar"]:hover {
+    background-color: rgb(3, 166, 3);
+}
+
+.produtos .produto button[class="botao_adc"] {
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    padding: .5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.produtos .produto button[class="botao_adc"]:hover {
+    background-color: rgb(225, 225, 1);
+}
+
+.produtos .produto .capalivro {
+    background-image: url(../imgs/livros/pairicopaipobre.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 23vw;
+    width: 17vw;
+    margin: 0 auto;
+    margin-bottom: .6em;
+    cursor: pointer;
+}
+.produtos .produto .capalivro1 {
+    background-image: url(../imgs/livros/pequenoprincipe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 23vw;
+    width: 17vw;
+    margin: 0 auto;
+    margin-bottom: .6em;
+    cursor: pointer;
+}
+.produtos .produto .capalivro2 {
+    background-image: url(../imgs/livros/eassimqueacaba.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 23vw;
+    width: 17vw;
+    margin: 0 auto;
+    margin-bottom: .6em;
+    cursor: pointer;
+}
+.produtos .produto .capalivro3 {
+    background-image: url(../imgs/livros/hobbit.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 23vw;
+    width: 17vw;
+    margin: 0 auto;
+    margin-bottom: .6em;
+    cursor: pointer;
+}
+
+#fim {
+    padding: 0;
+    background-color: var(--primarycolor);
+}
+
+#fim h2 {
+    text-align: center;
+    background-color: rgb(227, 227, 227);
+    padding: 1em;
+    color: var(--secondarycolor);
+}
+
+#fim .textofim {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#fim .fimflex {
+    width: 86.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 5em;
+    padding: 3em;
+}
+
+#fim .textofim p {
+    color: var(--secondarycolor);
+    text-align: justify;
+    flex-wrap: wrap;
+    font-size: 1em;
+    line-height: 1.7em;
+    font-weight: 500; 
+}
+
+#fim .fundo {
+    background-image: url(../imgs/fundo-fim.jpg);
+    width: 25dvw;
+    height: 25dvw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px){
+    #fim .fimflex {
+        flex-direction: column;
+    }
+
+    #fim .fundo {
+        width: 45dvw;
+        height: 45dvw;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+}
+
+.footer p{
+    font-size: 1em;
+    color: var(--primarycolor);
+}
+
+.footer p a {
+    color: var(--primarycolor);
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.footer p a:hover {
+    color: rgb(175, 182, 176);
+}
+
+
+.carrinho {
+    cursor: pointer;
+    background-color: var(--primarycolor);
+    height: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    padding: 2em;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 100%;
+    transition: .5s;
+}
+
+.carrinho:hover {
+    background-color: #fbfd6a;
+}
+
+.carrinho .fundocarrinho {
+    background-image: url(../imgs/carrinho.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+}
