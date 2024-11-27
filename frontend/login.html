@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
+    <script src="scripts/area.js" defer></script>
+    <title>Membros - Entre linhas</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="logo" href="#">Entre linhas - Área de membros</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div>
+                <h2 class="textlogin">Faça seu login 😎</h2>
+                    <form id="formlogin" class="login" autocomplete="off">
+                        <label for="usuariologin">Insira seu usuário:</label>
+                        <input type="text" id="usuariologin" name="usuariologin" placeholder="Digite seu usuário aqui"
+                            minlength="5" required>
+                        <label for="senhalogin">Insira sua senha:</label>
+                        <input type="password" id="senhalogin" name="senhalogin" placeholder="Digite sua senha aqui" minlength="5"
+                            required>
+                        <button class="buttonlogin" type="submit">Logar</button>
+                    </form>
+            </div>
+            <div>
+                <h2 class="textcadastro">Realize seu cadastro ✌️</h2>
+                    <form id="formcadastro" class="cadastro" autocomplete="off">
+                        <label for="usuariocadastro">Crie seu usuário:</label>
+                        <input type="text" id="usuariocadastro" name="usuariocadastro" placeholder="Digite seu usuário aqui"
+                            minlength="5" required>
+                        <label for="senhacadastro">Crie sua senha:</label>
+                        <input type="password" id="senhacadastro" name="senhacadastro" placeholder="Digite sua senha aqui" minlength="5"
+                            required>
+                        <button class="buttoncadastro" type="submit">Cadastrar</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2024 <a href="index.html">Entre linhas</a>. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

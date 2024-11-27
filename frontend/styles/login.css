@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --secondarycolor: #000;
+    --primarycolor: #ffffff;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+}
+
+/* HEADER */
+
+
+.logo {
+    color: var(--secondarycolor);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.nav {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: var(--primarycolor);
+    height: 8vh;
+}
+
+.container {
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.container .content .textlogin {
+    text-align: center;
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    padding: .5em;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 2px;
+}
+
+.container .content .login {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: blueviolet;
+    padding: 2em;
+    border-radius: 0 0 10px 10px;
+    width: auto;
+    height: auto;
+}
+
+.container .content .login label {
+    font-size: 1.1em;
+}
+
+.container .content .login input {
+    padding: .5em 3em .5em .5em;
+    border-radius: 10px 0;
+    border: none;
+    outline: none;
+    transition: .5s;
+}
+
+.container .content .login input:hover {
+    letter-spacing: .5px;
+}
+
+.container .content .login input[type="text"]{
+    margin-bottom: .5em;
+    margin-top: .1em;
+    font-size: 1.2em;
+}
+
+.container .content .login input[type="password"]{
+    margin-bottom: .5em;
+    margin-top: .1em;
+    font-size: 1.2em;
+}
+
+.container .content .login .buttonlogin {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.container .content .login .buttonlogin:hover {
+    background-color: rgb(81, 255, 81);
+}
+
+.container .content .login input:focus:invalid {
+    border-bottom: 3px solid red;
+}
+
+.container .content .login input:invalid:user-invalid {
+    border-bottom: 3px solid red;
+}
+
+.container .content .login input:valid:user-valid {
+    border-bottom: 3px solid rgb(0, 255, 0);
+}
+
+/* CADASTRO */
+
+.container .content .textcadastro {
+    text-align: center;
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    padding: .5em;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 2px;
+}
+
+.container .content .cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: blueviolet;
+    padding: 2em;
+    border-radius: 0 0 10px 10px;
+    width: auto;
+    height: auto;
+}
+
+.container .content .cadastro label {
+    font-size: 1.1em;
+}
+
+.container .content .cadastro input {
+    padding: .5em 3em .5em .5em;
+    border-radius: 10px 0;
+    border: none;
+    outline: none;
+    transition: .5s;
+}
+
+.container .content .cadastro input:hover {
+    letter-spacing: .5px;
+}
+
+.container .content .cadastro .buttoncadastro {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.container .content .cadastro .buttoncadastro:hover {
+    background-color: rgb(255, 252, 87);
+}
+
+.container .content .cadastro input[type="text"]{
+    margin-bottom: .5em;
+    margin-top: .1em;
+    font-size: 1.2em;
+}
+
+.container .content .cadastro input[type="password"]{
+    margin-bottom: .5em;
+    margin-top: .1em;
+    font-size: 1.2em;
+}
+
+.container .content .cadastro input:focus:invalid {
+    border-bottom: 3px solid red;
+}
+
+.container .content .cadastro input:invalid:user-invalid {
+    border-bottom: 3px solid red;
+}
+
+.container .content .cadastro input:valid:user-valid {
+    border-bottom: 3px solid rgb(0, 255, 0);
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+}
+
+.footer p{
+    font-size: 1em;
+    color: var(--primarycolor);
+}
+
+.footer p a {
+    color: var(--primarycolor);
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.footer p a:hover {
+    color: rgb(175, 182, 176);
+}
+
+@media (max-width: 800px){
+    .container .content {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin: 0 2em;
+        width: 80dvw;
+    }
+
+    .container .content .login {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background-color: blueviolet;
+        padding: 2em;
+        border-radius: 0 0 10px 10px;
+    }
+}
